@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(workspace_scripts)
+project(turtlebot_scripts)
 
 find_package(catkin REQUIRED)
 

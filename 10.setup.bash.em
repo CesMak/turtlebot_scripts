@@ -14,7 +14,7 @@ function add_robot_pc() {
 }
 
 # SET HERE YOUR WORKSPACE PREFIX
-export ROSWSS_PREFIX="roswss"
+export ROSWSS_PREFIX="turtle"
 export ROSWSS_ROOT_RELATIVE_PATH="../.."    # Relative path to workspace root from package location
 
 # SETUP YOUR ENVIRONMENT HERE
