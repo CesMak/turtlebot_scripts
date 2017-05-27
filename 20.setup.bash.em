@@ -1,20 +1,14 @@
 #!/bin/bash
-export ROBOT_PC_SCRIPTS=()
 
-# Use this method to register different robot pcs
-# Example:
-#   add_robot_pc "motion" "thor-motion" "motion" "roslaunch thor_mang_onboard_launch motion.launch"
-function add_robot_pc() {
-    script_name="$1"
-    export ${script_name}_script_name="$1"
-    export ${script_name}_hostname="$2"
-    export ${script_name}_screen_name="$3"
-    export ${script_name}_launch_command="$4"
-    ROBOT_PC_SCRIPTS+=($script_name)
-}
+# DO NOT REMOVE THIS BLOCK UNLESS YOU DON'T WANT TO USE CUSTOM SCRIPTS
+@[if DEVELSPACE]@
+export ROSWSS_SCRIPTS="@(PROJECT_SOURCE_DIR)/scripts:$ROSWSS_SCRIPTS"
+@[else]@
+export ROSWSS_SCRIPTS="@(CMAKE_INSTALL_PREFIX)/@(CATKIN_PACKAGE_SHARE_DESTINATION)/scripts:$ROSWSS_SCRIPTS"
+@[end if]@
 
 # SET HERE YOUR WORKSPACE PREFIX
-export ROSWSS_PREFIX="roswss"
+export ROSWSS_PREFIX="turtle"
 export ROSWSS_ROOT_RELATIVE_PATH="../.."    # Relative path to workspace root from package location
 
 # SETUP YOUR ENVIRONMENT HERE
@@ -24,7 +18,3 @@ export GAZEBO_WORLDS_PKG=""                 # Package name where your Gazebo wor
 export ROBOT_MASTER_HOSTNANE=""             # Hostname running ros master
 export ROBOT_HOSTNAMES=""                   # Hostnames of all available robot computers
 export ROBOT_USER=""                        # Main login user name for robot computers
-
-# export important variables (do not change!)
-export ROSWSS_ROOT=$(cd "@(CMAKE_SOURCE_DIR)"/$ROSWSS_ROOT_RELATIVE_PATH; pwd)
-export ROS_WORKSPACE=$ROSWSS_ROOT/src
