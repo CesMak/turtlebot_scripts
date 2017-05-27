@@ -2,11 +2,11 @@
 
 @[if DEVELSPACE]@
 export ROSWSS_SCRIPTS=@(PROJECT_SOURCE_DIR)/scripts
-echo "ROSWSS_SCRIPTS if devel_space:"
+echo "ROSWSS_SCRIPTS if devel_space"
 echo "$ROSWSS_SCRIPTS"
 @[else]@
 export ROSWSS_SCRIPTS=@(CMAKE_INSTALL_PREFIX)/@(CATKIN_PACKAGE_SHARE_DESTINATION)/scripts
-echo "ROSWSS_SCRIPTS if not devel_space:"
+echo "ROSWSS_SCRIPTS if not devel_space"
 echo "$ROSWSS_SCRIPTS"
 @[end if]@
 
