@@ -22,7 +22,13 @@ export GAZEBO_WORLDS_PKG="turtlebot1_gazebo"                 # Package name wher
 export ROBOT_MASTER_HOSTNANE=""             # Hostname running ros master
 export ROBOT_HOSTNAMES=""                   # Hostnames of all available robot computers
 export ROBOT_USER=""                        # Main login user name for robot computers
-export GAZEBO_LAUNCH_FILE="turtlebot1_launch_all_robots.launch"  
+export GAZEBO_LAUNCH_FILE="turtlebot1.launch"
 
-export TURTLEBOT1_MODEL="roomba"  #roomba create kobuki       caution roomba and create is at the moment the same base!
 export GAZEBO_MODEL_PATH=$WS_ROOT/src/turtlebot/turtlebot1_simulations/turtlebot1_gazebo/models
+
+
+export TURTLEBOT1_WORLD="empty"  #empty
+export TURTLEBOT1_MODEL="roomba" #roomba create kobuki
+export TURTLEBOT1_SENSOR="-"     #-(roomba) kinect asus_xtion_pro(create || kobuki)
+export TURTLEBOT1_STACKS="-"     #-(roomba) circles(create) hexagons(kobuki)
+export ROOMBA_COLOR="black"      #  white black  (roomba color)
