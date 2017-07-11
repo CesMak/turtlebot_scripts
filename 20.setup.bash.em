@@ -1,8 +1,8 @@
 #!/bin/bash
 
+
 #NOTE: if you want to change the export variables
 #It is necessary to turtle make so that your new variables will take action!
-#also note that if there occurs a decode python error this file is the responsible for such an error.
 
 # DO NOT REMOVE THIS BLOCK UNLESS YOU DON'T WANT TO USE CUSTOM SCRIPTS
 @[if DEVELSPACE]@
